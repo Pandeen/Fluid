@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fluid</title>
+  
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  
+  <%= csrf_meta_tags %>
+  
+</head>
+<body>
+
+  <header class='navbar navbar-default navbar-static-top'>
+    <div class='container'>
+      <div class='navbar-header'>
+        <a class='navbar-brand'><i class='glyphicon glyphicon-tint'></i> Fluid</a>
+      </div>
+      <ul class='nav navbar-nav navbar-right'>
+        <li><%= link_to 'Tracking', tracking_path %></li>
+        <li><%= link_to 'Tickets', tickets_path %></li>
+        <li><%= link_to 'Assets', devices_path %></li>
+        <li><a href='/'><i class='glyphicon glyphicon-user'></i></a></li>
+        <li><a href='/'><i class='glyphicon glyphicon-cog'></i></a></li>
+      </ul>
+      <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+      </form>
+    </div>
+  </header>
+  
+  <div class='container'>
+    <div class='row'>
+      <div class='col-xs-12'>
+        <p id="notice"><%= notice %></p>
+        <p id="alert"><%= alert %></p>
+      </div>
+    </div>
+  </div>
+  <%= yield %>
+  
+</body>
+</html>

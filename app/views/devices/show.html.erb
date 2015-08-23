@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Barcode:</strong>
+  <%= @device.barcode %>
+</p>
+
+<p>
+  <strong>Serial:</strong>
+  <%= @device.serial %>
+</p>
+
+<p>
+  <strong>Service tag:</strong>
+  <%= @device.service_tag %>
+</p>
+
+
+<%= link_to 'Edit', edit_device_path(@device) %> |
+<%= link_to 'Back', devices_path %>
